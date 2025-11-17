@@ -1,54 +1,58 @@
 # Sistema de Gestão de Estoque
-Um projeto completo de sistema de gestão de estoque (SGE) focado em um mercado, desenvolvido totalmente em Python. O sistema conta com uma interface gráfica e um banco de dados local para controle total das operações.
+Um projeto completo de sistema de gestão de estoque focado em um mercado, desenvolvido totalmente em Python. O sistema conta com uma interface gráfica e um banco de dados local para controle total das operações.
 
 <img width="1353" height="717" alt="image" src="https://github.com/user-attachments/assets/cc58e709-dc1b-4d50-96f4-50ed4d4f2783" />
 
 
-# Funcionalidades
-O sistema foi construído com um fluxo de trabalho completo, permitindo ao usuário:
+## Funcionalidades
+  Dashboard Interativo: Métricas rápidas (custo total, itens totais, estoque baixo) e atalhos.
 
-  Dashboard Interativo: Métricas rápidas (custo total, itens totais, estoque baixo) e atalhos para as funções principais.
+  Alertas Visuais: Lista de produtos com estoque baixo direto na página principal, com botão para "Comprar" imediato.
 
-  Alertas Visuais: Lista de produtos com estoque baixo (com limite configurável) direto na página principal, com botão para "Comprar" imediato.
+  Gestão Completa (CRUD): Cadastro, Exclusão, Compra (Entrada) e Venda (Saída) de produtos.
 
-  Gestão de Produtos (CRUD): Cadastro completo de novos produtos e exclusão de itens.
-
-  Busca e Ordenação Avançada: Uma tela central para listar todos os produtos, com filtros por nome, filtros por categoria e ordenação clicável em qualquer coluna (código, nome, qtd, etc.).
-
-  Movimentação de Estoque: Funções de "Comprar" (Entrada) e "Vender" (Saída) que são acessadas direto pela lista, com atualização em tempo real no banco e na interface.
+  Busca e Ordenação Avançada: Tela de produtos com filtros por nome/categoria e ordenação clicável em colunas.
 
   Relatórios Gerenciais:
+  
+  → Gráficos (Matplotlib): Curva ABC, Valor por Categoria e Evolução de Estoque.
+  
+  → Relatórios (Texto): Cálculo de Custo de Manutenção e Giro de Estoque.
 
-    Gráficos (Matplotlib): Curva ABC, Valor por Categoria e Evolução de Estoque.
+## Tecnologias Utilizadas
+→ Python 3
 
-    Relatórios (Texto): Cálculo de Custo de Manutenção (pedindo a taxa %) e Giro de Estoque (pedindo o período em dias).
+→ Tkinter
 
-  Banco de Dados: Persistência de dados com SQLite. O script já vem com um gerador de 800 produtos (incluindo exemplos de estoque baixo) para testes.
+→ SQLite3
 
-# Tecnologias Utilizadas
-Python 3
-
-Tkinter (para a interface gráfica)
-
-SQLite3 (para o banco de dados local)
-
-Matplotlib (para a geração dos gráficos)
-
-PyInstaller (usado para empacotar o projeto em um .exe)
+→ Matplotlib
 
 # Como Executar
-Você pode rodar este projeto de duas formas:
+Este projeto tem duas formas de instalação, escolha a sua:
 
-## 1. Para Desenvolvedores (Rodando o Script)
-Se você tem o Python instalado:
+## 1. Para Usuários (Recomendado)
+Se você quer apenas usar o programa no Windows, baixe o pacote pronto:
 
-Baixe o arquivo Python e execute no VSCode, o banco de dados será gerado automaticamente
+Vá para a Página de Releases deste projeto.
 
-## 2. Para Usuários (Usando o .exe)
-O programa foi empacotado usando o PyInstaller.
+Baixe o arquivo .zip da versão mais recente (gestao_estoque_v1.0.zip).
 
-Baixe a pasta dist/mercado_gui/ (ou o arquivo .zip gerado na seção "Releases" do GitHub).
+Descompacte o arquivo em qualquer pasta.
 
-MUITO IMPORTANTE: O arquivo mercado.db deve estar na mesma pasta que o mercado_gui.exe para que o programa funcione e salve os dados.
+Abra a pasta mercado_gui e dê dois cliques no mercado_gui.exe.
 
-Dê dois cliques no mercado_gui.exe para rodar
+(Importante: O .exe e o mercado.db devem estar sempre na mesma pasta para funcionar.)
+
+## 2. Para Desenvolvedores (Código-Fonte)
+   Se você quer rodar o código, modificar ou estudar:
+   
+        1. Clone o repositório
+        
+        2. Instale as dependências
+        pip install matplotlib, tkinter, sqlite3
+        
+        3. (Se o mercado.db não existir) Apague o .gitignore (ou comente a linha *.db)
+        para que o script crie o banco na primeira vez que rodar.
+        
+        # 4. Rode o programa python mercado_gui.py
