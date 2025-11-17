@@ -1,5 +1,5 @@
 # Sistema de Gestão de Estoque
-Um projeto completo de sistema de gestão de estoque (SGE) focado em um mercado, desenvolvido totalmente em Python. O sistema conta com uma interface gráfica moderna (via Tkinter) e um banco de dados local (SQLite) para controle total das operações.
+Um projeto completo de sistema de gestão de estoque (SGE) focado em um mercado, desenvolvido totalmente em Python. O sistema conta com uma interface gráfica e um banco de dados local para controle total das operações.
 
 <img width="1353" height="717" alt="image" src="https://github.com/user-attachments/assets/cc58e709-dc1b-4d50-96f4-50ed4d4f2783" />
 
